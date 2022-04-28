@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  header {
+    .header-top {
+      height: 40px;
+      background-color: whitesmoke;
+      .container {
+        height: 100%;
+        .row {
+          height: 100%;
+          ul {
+            margin: 0 !important;
+          }
+          .registration {
+            ul {
+              li:not(:last-child) {
+                &::after {
+                  content: "|";
+                  position: relative;
+                  left: 13px;
+                }
+                a{
+                    text-decoration: none;
+                    color: black;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .header-bottom {
+      .container {
+        .row {
+          ul {
+            margin: 0;
+            li{
+                a{
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+          }
+          .search-basket {
+            .search {
+                position: relative;               
+              input {
+                border-radius: 20px;               
+              }
+              .icon{
+                  position: absolute;
+                  top: 0;
+                  padding: 1px;
+                  border-radius: 50px;
+                  font-size: 20px;
+                  right: 210px;
+                  
+                  ul{
+                      li{
+                          a{
+                            color: black;
+                          }
+                      }
+                  }
+              }
+            }
+            .basket-wish {
+              display: flex;
+              align-items: center;
+              ul {
+                width: 110px;
+                li{
+                  i {
+                    font-size: 25px;
+                  }                  
+                }           
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .basket-wish{
+      ul{
+          li:nth-child(3){
+            display: none;
+          }
+      }
+  }
+
+@media only screen and (max-width:768px) {
+    .header-top ,.search input ,.basket-wish ul li:nth-child(1),.nav-links{
+        display: none;
+    }
+    .basket-wish ul li:nth-child(3){
+        display: block;
+        }
+  
+}
